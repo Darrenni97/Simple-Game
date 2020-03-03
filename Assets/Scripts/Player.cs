@@ -17,8 +17,14 @@ public class Player : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    //calculate movement input
     inputVector = new Vector3(Input.GetAxis("Horizontal") * 10f, playerBody.velocity.y, Input.GetAxis("Vertical") * 10f);
+    //character facing movement direction
     transform.LookAt(transform.position + new Vector3(inputVector.x, 0, inputVector.z));
+  }
+
+  private void FixedUpdate()
+  {
     playerBody.velocity = inputVector;
   }
 }
