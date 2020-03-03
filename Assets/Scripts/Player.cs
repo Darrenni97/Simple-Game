@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
   [SerializeField]
   private Rigidbody playerBody;
+
+  private Vector3 inputVector;
   // Start is called before the first frame update
   void Start()
   {
@@ -15,6 +17,7 @@ public class Player : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    playerBody.velocity = new Vector3(2f, playerBody.velocity.y, 2f);
+    inputVector = new Vector3(Input.getAxisRaw("Horizontal"), 0, Input.getAxisRaw("Vertical"));
+    playerBody.velocity = inputVector;
   }
 }
