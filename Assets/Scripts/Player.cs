@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
   void Update()
   {
     inputVector = new Vector3(Input.GetAxisRaw("Horizontal") * 10f, playerBody.velocity.y, Input.GetAxisRaw("Vertical") * 10f);
+    transform.LookAt(transform.position + new Vector3(inputVector.x, 0, inputVector.z));
     playerBody.velocity = inputVector;
   }
 }
