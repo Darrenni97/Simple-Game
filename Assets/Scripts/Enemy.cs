@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
       {
         waypointIndex++;
       }
-
+      targetPosition = waypoints[waypointIndex].position;
     }
   }
 }
