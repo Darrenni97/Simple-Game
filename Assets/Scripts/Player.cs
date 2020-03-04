@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
   [SerializeField]
   private Rigidbody playerBody;
+  private bool jump;
 
   private Vector3 inputVector;
   // Start is called before the first frame update
@@ -21,10 +22,21 @@ public class Player : MonoBehaviour
     inputVector = new Vector3(Input.GetAxis("Horizontal") * 10f, playerBody.velocity.y, Input.GetAxis("Vertical") * 10f);
     //character facing movement direction
     transform.LookAt(transform.position + new Vector3(inputVector.x, 0, inputVector.z));
+
+    if (Input.GetButtonDown("Jump"))
+    {
+      jump = true;
+    }
   }
 
   private void FixedUpdate()
   {
     playerBody.velocity = inputVector;
+
+    if (jump)
+    {
+      playerBody.AddForce(Vector3.up * 20f, ForceMode.Impulse);
+      jump = false;
+    }
   }
 }
