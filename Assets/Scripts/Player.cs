@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
   {
     playerBody.velocity = inputVector;
 
-    if (jump)
+    if (jump && IsGrounded())
     {
       playerBody.AddForce(Vector3.up * 20f, ForceMode.Impulse);
       jump = false;
