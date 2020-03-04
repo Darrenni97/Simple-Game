@@ -24,7 +24,15 @@ public class Enemy : MonoBehaviour
     transform.position = Vector3.MoveTowards(transform.position, targetPosition, 0.5f * moveSpeed);
     if (Vector3.Distance(transform.position, targetPosition) < .25f)
     {
-      waypointIndex++;
+      if (waypointIndex >= waypoints.Length - 1)
+      {
+        waypointIndex = 0;
+      }
+      else
+      {
+        waypointIndex++;
+      }
+
     }
   }
 }
