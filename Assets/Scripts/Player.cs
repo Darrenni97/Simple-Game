@@ -39,4 +39,11 @@ public class Player : MonoBehaviour
       jump = false;
     }
   }
+
+  bool IsGrounded()
+  {
+    float distance = GetComponent<Collider>().bounds.extents.y + 0.01f;
+    Ray ray = new Ray(transform.position, Vector3.down);
+    return Physics.Raycast(ray, distance);
+  }
 }
