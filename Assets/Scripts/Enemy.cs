@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
   [SerializeField]
   [Range(0, 1f)]
   private float moveSpeed;
+  private int waypointIndex;
   // Start is called before the first frame update
   void Start()
   {
@@ -21,5 +22,9 @@ public class Enemy : MonoBehaviour
   void Update()
   {
     transform.position = Vector3.MoveTowards(transform.position, targetPosition, 0.5f * moveSpeed);
+    if (Vector3.Distance(transform.position, targetPosition) < .25f)
+    {
+      waypointIndex++;
+    }
   }
 }
