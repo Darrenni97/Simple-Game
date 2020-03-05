@@ -1347,7 +1347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985fee2e4adc9428b9aaf854e50a3f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 2
   lastLevel: 1
 --- !u!4 &1489119850
 Transform:

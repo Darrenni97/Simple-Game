@@ -10,10 +10,12 @@ public class Game : MonoBehaviour
   [SerializeField]
   private bool lastLevel;
   private int nextLevel;
-  // Start is called before the first frame update
+
+
+  // Use this for initialization
   void Start()
   {
-    nextLevel = level += 1;
+    nextLevel = level + 1;
   }
 
   public void LoadLevel(string levelName)
@@ -30,8 +32,8 @@ public class Game : MonoBehaviour
     }
     else
     {
-      //go to main menu
-      LoadLevel("Level-1");
+      // go to main menu
+      LoadLevel("Main-Menu");
     }
   }
 
