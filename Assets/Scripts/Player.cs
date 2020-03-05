@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
   private Game game;
   private bool jump;
   [SerializeField]
+  private TMPro.TextMeshProUGUI coinText;
+  [SerializeField]
   private int coins;
 
   private Vector3 inputVector;
@@ -66,6 +68,7 @@ public class Player : MonoBehaviour
       case "Coin":
         coins++;
         Destroy(other.gameObject);
+        coinText.text = string.Format("Coins\n{0}", coins);
         break;
       case "Goal":
         break;
