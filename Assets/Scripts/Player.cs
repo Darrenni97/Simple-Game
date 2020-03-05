@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
   private Rigidbody playerBody;
   private Game game;
   private bool jump;
+  [SerializeField]
+  private int coins;
 
   private Vector3 inputVector;
   // Start is called before the first frame update
@@ -49,11 +51,26 @@ public class Player : MonoBehaviour
     return Physics.Raycast(ray, distance);
   }
 
-  private void OnCollisionEnter(Collision collsion)
+  private void OnCollisionEnter(Collision collision)
   {
-    if (collsion.gameObject.CompareTag("Enemy"))
+    if (collision.gameObject.CompareTag("Enemy"))
     {
       game.ReloadCurrentLevel();
+    }
+  }
+
+  private void OnTriggerEnter(Collider other)
+  {
+    switch (other.tag)
+    {
+      case "Coin":
+        coins++;
+        Destroy(other.gameObject);
+        break;
+      case "Goal":
+        break;
+      default:
+        break;
     }
   }
 }
