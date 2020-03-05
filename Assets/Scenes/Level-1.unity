@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 475759673}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -721,6 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBody: {fileID: 0}
+  game: {fileID: 1489119849}
 --- !u!65 &1091635382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1009,7 +1010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 985fee2e4adc9428b9aaf854e50a3f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 0
   lastLevel: 0
 --- !u!4 &1489119850
 Transform:
@@ -1413,7 +1414,7 @@ GameObject:
   - component: {fileID: 2048431744}
   m_Layer: 0
   m_Name: Enemy (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
