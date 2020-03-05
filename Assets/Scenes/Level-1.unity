@@ -318,7 +318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475759668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 10}
+  m_LocalPosition: {x: 0, y: 0.5, z: 4.98}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 761051030}
@@ -397,7 +397,7 @@ MonoBehaviour:
   waypoints:
   - {fileID: 965985292}
   - {fileID: 397503456}
-  moveSpeed: 1
+  moveSpeed: 0.7
 --- !u!1 &551224145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,7 +1560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530152039}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 12.7}
+  m_LocalPosition: {x: 0, y: 0.5, z: 11.19}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1324707298}
@@ -1864,7 +1864,7 @@ MonoBehaviour:
   - {fileID: 821125447}
   - {fileID: 582580235}
   - {fileID: 1616013008}
-  moveSpeed: 1
+  moveSpeed: 0.7
 --- !u!65 &2048431745
 BoxCollider:
   m_ObjectHideFlags: 0
