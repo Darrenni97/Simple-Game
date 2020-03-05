@@ -30,4 +30,9 @@ public class Game : MonoBehaviour
       SceneManager.LoadScene("Level-1")
     }
   }
+
+  public void ReloadCurrentLevel()
+  {
+    SceneManager.LoadScene("Level-" + level)
+  }
 }
