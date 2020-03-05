@@ -3,47 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Game : MonoBehaviour
-{
+public class Game : MonoBehaviour {
   [SerializeField]
   private int level;
   [SerializeField]
   private bool lastLevel;
   private int nextLevel;
 
-
   // Use this for initialization
-  void Start()
-  {
+  void Start () {
     nextLevel = level + 1;
   }
 
-  public void LoadLevel(string levelName)
-  {
-    SceneManager.LoadScene(levelName);
+  public void LoadLevel (string levelName) {
+    SceneManager.LoadScene (levelName);
   }
 
-  public void LoadNextLevel()
-  {
-    if (!lastLevel)
-    {
+  public void LoadNextLevel () {
+    if (!lastLevel) {
       string sceneName = "Level-" + nextLevel;
-      LoadLevel(sceneName);
-    }
-    else
-    {
+      LoadLevel (sceneName);
+    } else {
       // go to main menu
-      LoadLevel("Main-Menu");
+      LoadLevel ("Main-Menu");
     }
   }
 
-  public void ReloadCurrentLevel()
-  {
-    LoadLevel("Level-" + level);
+  public void ReloadCurrentLevel () {
+    LoadLevel ("Level-" + level);
   }
 
-  public void Quit()
-  {
-    Application.Quit();
+  public void Quit () {
+    Application.Quit ();
   }
 }
