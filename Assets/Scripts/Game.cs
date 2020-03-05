@@ -27,12 +27,17 @@ public class Game : MonoBehaviour
     else
     {
       //go to main menu
-      SceneManager.LoadScene("Level-1")
+      SceneManager.LoadScene("Level-1");
     }
   }
 
   public void ReloadCurrentLevel()
   {
-    SceneManager.LoadScene("Level-" + level)
+    SceneManager.LoadScene("Level-" + level);
+  }
+
+  public void Quit()
+  {
+    Application.Quit();
   }
 }
