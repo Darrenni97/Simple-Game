@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
   [SerializeField]
   private Rigidbody playerBody;
+  [SerializeField]
+  private Game game;
   private bool jump;
 
   private Vector3 inputVector;
@@ -45,5 +47,13 @@ public class Player : MonoBehaviour
     float distance = GetComponent<Collider>().bounds.extents.y + 0.01f;
     Ray ray = new Ray(transform.position, Vector3.down);
     return Physics.Raycast(ray, distance);
+  }
+
+  private void OnCollisionEnter(Collision collsion)
+  {
+    if (collsion.gameObject.CompareTag("Enemy"))
+    {
+      game.ReloadCurrentLevel();
+    }
   }
 }
