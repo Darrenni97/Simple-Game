@@ -2,27 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goal : MonoBehaviour
-{
+public class Goal : MonoBehaviour {
   private int requiredCoins;
   private Game game;
 
   // Start is called before the first frame update
-  void Start()
-  {
-    game = FindObjectOfType<Game>();
-    requiredCoins = GameObject.FindGameObjectsWithTag("Coin").Length;
+  void Start () {
+    game = FindObjectOfType<Game> ();
+    requiredCoins = GameObject.FindGameObjectsWithTag ("Coin").Length;
   }
 
-  public void CheckForCompletion(int coinCount)
-  {
-    if (coinCount >= requiredCoins)
-    {
-      game.LoadNextLevel();
-    }
-    else
-    {
-      Debug.Log("You do not have enough coins!");
+  public void CheckForCompletion (int coinCount) {
+    if (coinCount >= requiredCoins) {
+      game.LoadNextLevel ();
+    } else {
+      Debug.Log ("You do not have enough coins!");
     }
   }
 
