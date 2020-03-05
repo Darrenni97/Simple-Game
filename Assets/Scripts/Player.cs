@@ -71,6 +71,7 @@ public class Player : MonoBehaviour
         coinText.text = string.Format("Coins\n{0}", coins);
         break;
       case "Goal":
+        other.GetComponent<Goal>().CheckForCompletion(coins);
         break;
       default:
         break;
