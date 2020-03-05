@@ -11,7 +11,7 @@ public class Goal : MonoBehaviour
   void Start()
   {
     game = FindObjectOfType<Game>();
-    requiredCoins = GameObject.FindGameObjectsWithTag("Coin").Length();
+    requiredCoins = GameObject.FindGameObjectsWithTag("Coin").Length;
   }
 
   public void CheckForCompletion(int coinCount)
