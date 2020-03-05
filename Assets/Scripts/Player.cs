@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
   private bool jump;
   [SerializeField]
   private TMPro.TextMeshProUGUI coinText;
+  private GameObject sword;
   [SerializeField]
   private int coins;
 
@@ -43,6 +44,14 @@ public class Player : MonoBehaviour
     {
       playerBody.AddForce(Vector3.up * 20f, ForceMode.Impulse);
       jump = false;
+    }
+  }
+
+  private void PerformAttack()
+  {
+    if (!sword.activeSelf)
+    {
+      sword.SetActive(true);
     }
   }
 
